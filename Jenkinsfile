@@ -62,11 +62,11 @@ pipeline {
                  }
              }
          }
-         /*
+         
 	    stage("Trivy Image Scan") {
              steps {
                  script {
-	              sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image ashfaque9x/reddit-clone-pipeline:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table > trivyimage.txt')
+	              sh ('docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image khadija404/reddit-clone-pipeline:latest --no-progress --scanners vuln  --exit-code 0 --severity HIGH,CRITICAL --format table > trivyimage.txt')
                  }
              }
          }
@@ -93,11 +93,11 @@ pipeline {
                body: "Project: ${env.JOB_NAME}<br/>" +
                    "Build Number: ${env.BUILD_NUMBER}<br/>" +
                    "URL: ${env.BUILD_URL}<br/>",
-               to: 'ashfaque.s510@gmail.com',                              
+               to: 'bencheikh.khadijaa@gmail.com',                              
                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
      }
-  */
+
 }
-}
+
 
